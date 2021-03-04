@@ -22,3 +22,16 @@ Route::get('/', function () {
 });
 
 Route::get('/laravel2021', 'PostController@index')->name("AnotherPage");
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('check','FrontEndController@jekono')->name('copy');
+    Route::get('/home', 'HomeController@index')->name('home');
+});
