@@ -1,1 +1,1 @@
-<h1>This is the main page of laravel2021.</h1>
+<h1 style="background-color:#26d2c2; color:#3605f7; text-align:center; margin:270px; padding:40px;">This is the main page of laravel 2021</h1>

@@ -13,25 +13,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/cpc', function () {
-    return view('welcome');
-});
-
-Route::get('/', function () {
+Route::get('/', function () {  
     return view('check');
 });
 
+/*Route::get('/cpc', function () {
+    return view('welcome')->name('welcome');
+});*/
+
+Auth::routes();
+
 Route::get('/laravel2021', 'PostController@index')->name("AnotherPage");
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-
 
 Route::middleware(['auth'])->group(function () {
     Route::get('check','FrontEndController@jekono')->name('copy');
-    Route::get('/home', 'HomeController@index')->name('home');
+    //Route::get('/home', 'HomeController@index')->name('home');
 });
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/welcome', 'FrontEndController@welcome')->name('welcome');
+Route::get('/home/users', 'HomeController@userlist')->name('user.list');
+Route::get('/user', 'UserController@index')->name('user.homepage');
+Route::get('/admin', 'AdminController@index')->name('admin.homepage');

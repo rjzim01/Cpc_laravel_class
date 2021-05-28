@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    CPC
+                <p style="color:blue;">WELCOME</p>
                 </div>
 
                 <div class="links">

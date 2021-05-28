@@ -1,0 +1,1 @@
+<h1 style="background-color:#950eea; color:#56ff00; text-align:center; margin:270px; padding:40px;">This is the Admin page</h1>
